@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Deeeep.io BGM",
+  "version": "1.0.2",
+  "description": "Tired of boring ol' Deeeep.io with NO music? Well, here you go, a badly made hunk of garbage that hopes to fix it.",
+  "permissions": ["webRequest","https://deeeep.io/"],
+  "background": {
+    "scripts": ["bg.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.deeeep.io/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+  "page_action": {
+    "default_popup": "popup.html"
+  }
+}
